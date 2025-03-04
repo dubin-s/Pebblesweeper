@@ -9,9 +9,19 @@ import Foundation
 
 
 public struct PebbleBoard {
-    // add properties
+    let width: Int
+    let height: Int
+    private var pieces: [PebblePiece]
 }
 
 public struct PebblePiece {
-    // add properties
+    var isRevealed: Bool = false
+    
+    mutating func reveal() {
+        isRevealed = true
+    }
+    
+    mutating func hide() {
+        isRevealed = false
+    }
 }
